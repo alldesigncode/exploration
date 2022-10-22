@@ -1,0 +1,115 @@
+:root {
+  --c-black: #060706;
+  --c-light: #e9e9e9;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  block-size: 100%;
+  overflow: hidden;
+  height: -webkit-fill-available;
+  scroll-behavior: smooth;
+}
+
+body {
+  block-size: 100%;
+  font-family: "Aboreto", cursive, system-ui, sans-serif;
+  overscroll-behavior: none;
+  background-color: var(--c-black);
+}
+
+.main {
+  block-size: 100%;
+  position: relative;
+}
+
+.picture {
+  position: absolute;
+  width: 450px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  opacity: 0;
+
+  & > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 30px;
+  z-index: 10000;
+}
+
+.title {
+  position: absolute;
+  top: 60%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  z-index: 110;
+  font-weight: 400;
+  visibility: "hidden";
+  opacity: 0;
+}
+
+.sub {
+  transform: translateX(50px);
+}
+
+.line {
+  background: white;
+  width: 50px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: -18%;
+  z-index: 1000;
+}
+
+.text {
+  display: block;
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--c-light);
+  transform: translateX(-50px);
+}
+
+.text-1 {
+  display: block;
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--c-light);
+}
+
+.scroll {
+  position: absolute;
+  z-index: 1000;
+  color: lightgrey;
+  font-family: "Source Sans Pro";
+  font-size: 12px;
+  bottom: 7%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 2px;
+  visibility: hidden;
+  opacity: 0;
+}
